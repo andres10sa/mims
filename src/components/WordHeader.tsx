@@ -5,7 +5,7 @@ import { IWord } from "@/models/dictionary";
 export const WordHeader: FC<{ word: IWord }> = ({ word }) => {
   
   const audioSrc = useMemo(
-    () => word?.phonetics?.find((item: any) => item.audio)?.audio,
+    () => word?.phonetics?.find((item) => item.audio)?.audio,
     [word]
   );
 

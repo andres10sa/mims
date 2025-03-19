@@ -18,7 +18,7 @@ export const Definitions= () => {
       {data.map(({ meanings, sourceUrls, word }, index) => (
         <div className="mb-4" key={`${word}${index}`}>
           {meanings.map(
-            ({ definitions, partOfSpeech, synonyms, antonyms }: any) => (
+            ({ definitions, partOfSpeech, synonyms = [], antonyms = [] }) => (
               <article className="mb-6" key={partOfSpeech}>
                 <div className="flex items-center gap-2">
                   <h3 className="italic font-bold">{partOfSpeech}</h3>
