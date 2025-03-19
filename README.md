@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MIMS - Proyecto Next.js
 
-## Getting Started
+Este es un proyecto basado en Next.js que utiliza Redux para la gestión de estado y consume una API de diccionario.
 
-First, run the development server:
+## 🚀 Instalación y Ejecución
 
+Sigue estos pasos para clonar y ejecutar el proyecto en tu máquina local:
+
+### 1. Clonar el repositorio
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/andres10sa/mims.git
+cd mims
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Instalar dependencias
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Configurar variables de entorno
+Crea un archivo `.env.local` en la raíz del proyecto y agrega la siguiente variable:
+```
+NEXT_PUBLIC_DICTIONARY_API_URL=https://api.dictionaryapi.dev/api/v2/entries/en
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Ejecutar el proyecto
+```bash
+npm run dev
+```
+El servidor se iniciará en `http://localhost:3000/`.
 
-## Learn More
+## 📂 Estructura del Proyecto
+El código está organizado en las siguientes carpetas clave:
 
-To learn more about Next.js, take a look at the following resources:
+- **`app/`** - Contiene las páginas y la estructura principal de la aplicación.
+- **`components/`** - Componentes reutilizables de la UI.
+- **`constants/`** - Constantes globales utilizadas en el proyecto.
+- **`models/`** - Tipos e interfaces para la gestión de datos.
+- **`redux/`** - Configuración de Redux con slices y store.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tecnologías Usadas
+- **Next.js** - Framework de React para SSR y SSG.
+- **Redux Toolkit** - Manejo del estado global.
+- **React Icons** - Iconos para la interfaz.
+- **Headless UI** - Componentes accesibles y personalizables.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
+📌 **Autor**: [andres10sa](https://github.com/andres10sa)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
